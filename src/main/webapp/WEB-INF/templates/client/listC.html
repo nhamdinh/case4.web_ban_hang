@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layoutC :: head">
+
+</head>
+<body>
+<nav th:replace="layoutC :: header"></nav>
+<div class="container main-content list">
+	<div th:if="${success}"
+		 class="row alert alert-success alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<span th:text="${success}"></span>
+	</div>
+	<div class="row">
+		<a th:href="@{/create-haisan}" class="btn btn-success pull-left">
+			<span class="glyphicon glyphicon-plus"></span> Add new hai san
+		</a>
+		<form class="form-inline pull-right" action="#"
+			  th:action="@{/haisan/search/1}" method="GET">
+
+			<div class="form-group">
+				<input type="text" class="form-control" name="s"
+					   placeholder="Nhập hải sản cần tìm..." />
+			</div>
+			<button type="submit" class="btn btn-primary">Search</button>
+		</form>
+	</div>
+	<th:block th:if="${#lists.isEmpty(haisans.pageList)}">
+		<h3>No hai san</h3>
+	</th:block>
+
+	<th:block th:unless="${#lists.isEmpty(haisans)}">
+		<div class="row">
+			<table class="table table-bordered table-hover">
+				<thead>
+				<tr>
+					<th>No</th>
+					<th>Tên</th>
+
+					<th>Ngày nhập</th>
+					<th>Nguồn gốc</th>
+					<th>Giá bán</th>
+
+
+					<th>Xem chi tiết</th>
+					<th>Cho vào giỏ</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr th:each="contact,iterStat : ${haisans.pageList}">
+					<td th:text="${iterStat.count}"></td>
+					<td th:text="${contact.getName()}"></td>
+
+					<td th:text="${contact.date}"></td>
+					<td th:text="${contact.noiban}"></td>
+					<td th:text="${contact.giaban}"></td>
+
+					<td><a th:href="@{/haisan/{id}/view(id=${contact.id})}">
+						<span>Xem chi tiết</span></a></td>
+
+					<td><a th:href="@{/haisan/{id}/delete(id=${contact.id})}"
+						   onclick="return confirm('Are You Sure?')">
+						<button>Cho vào giỏ</button></a></td>
+				</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+		<ul class="pagination">
+			<li
+					th:class="${currentIndex == 1}? 'page-item disabled' : 'page-item'">
+				<a class="page-link" th:href="@{/haisan/}">First</a>
+			</li>
+			<li
+					th:class="${currentIndex == 1}? 'page-item disabled': 'page-item' ">
+				<a class="page-link" aria-label="Previous"
+				   th:href="@{|${baseUrl}${currentIndex - 1}|}"
+				   title='Go to previous page'><span aria-hidden="true">«Previous</span>
+					<span class="sr-only">Previous</span></a>
+			</li>
+			<li th:each="item : ${#numbers.sequence(beginIndex,endIndex)}"
+				th:class="${item == currentIndex ? 'page-item active' :'page-item' }">
+				<a class="page-link" th:href="@{|${baseUrl}${item}|}"> <span
+						th:text='${item}'>1</span>
+				</a>
+			</li>
+			<li
+					th:class="${currentIndex == totalPageCount}? 'page-item disabled': 'page-item'">
+				<a class="page-link" aria-label="Next"
+				   th:href="@{|${baseUrl}${currentIndex + 1}|}" title='Go to next page'><span
+						aria-hidden="true">Next»</span> <span class="sr-only">Next</span></a>
+			</li>
+			<li
+					th:class="${currentIndex == totalPageCount}? 'page-item disabled':'page-item'">
+				<a class="page-link" th:href="@{|${baseUrl}${totalPageCount}|}">Last</a>
+			</li>
+		</ul>
+
+
+	</th:block>
+</div>
+<!-- /.container -->
+
+<footer th:replace="layoutC :: footer1"></footer>
+</body>
+</html>
