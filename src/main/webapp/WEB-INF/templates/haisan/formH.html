@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layoutH :: head"></head>
+<body>
+<nav th:replace="layoutH :: header"></nav>
+
+<div th:if="${success}"
+     class="row alert alert-success alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert"
+            aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <span th:text="${success}"></span>
+</div>
+<div class="container main-content form">
+
+    <div class="row">
+        <form action="#" th:action="@{/admin/save-haisan}" th:object="${haisan}"
+              method="POST">
+            <input type="hidden" th:field="*{id}"/>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control"
+                       th:field="*{name}"/>
+            </div>
+
+			<div class="form-group">
+				<label>phanloai</label>
+				<select th:field="*{phanloai}">
+					<option th:each="p : ${phanloais}" th:value="${p.id}" th:text="${p.name}"></option>
+				</select>
+			</div>
+
+
+
+
+			<div class="form-group">
+                <label>date</label>
+                <input type="date" class="form-control"
+                       th:field="*{date}"/>
+            </div>
+			<div class="form-group">
+				<label>noiban</label>
+				<input type="text" class="form-control"
+					   th:field="*{noiban}" />
+			</div>
+			<div class="form-group">
+				<label>cachnau</label>
+				<input type="text" class="form-control"
+					   th:field="*{cachnau}" />
+			</div>
+			<div class="form-group">
+				<label>soluong</label>
+				<input type="number" class="form-control"
+					   th:field="*{soluong}" />
+			</div>
+			<div class="form-group">
+				<label>giamua</label>
+				<input type="number" class="form-control"
+					   th:field="*{giamua}" />
+			</div>
+			<div class="form-group">
+				<label>giaban</label>
+				<input type="number" class="form-control"
+					   th:field="*{giaban}" />
+			</div>
+
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div><!-- /.container -->
+
+<footer th:replace="layoutH :: footer"></footer>
+</body>
+</html>

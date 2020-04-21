@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layoutP :: head">
+
+</head>
+<body>
+<nav th:replace="layoutP :: header"></nav>
+<div class="container main-content list">
+    <div class="row">
+        <a th:href="@{/admin/create-phanloai}" class="btn btn-success pull-left">
+            <span class="glyphicon glyphicon-plus"></span> Thêm mới phân loại
+        </a>
+        <form class="form-inline pull-right" action="#"
+              th:action="@{/admin/phanloai/search/1}" method="GET">
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="s"
+                       placeholder="Nhập tên phân loại..." />
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <h1 style="color:DodgerBlue;">DS các hải sản thuộc :[ <span th:color="Tomato" th:text="${phanloai.name}"></span> ]</h1>
+
+    <th:block>
+        <div class="row">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>tenhaisan</th>
+                    <th>date</th>
+                    <th>noiban</th>
+                    <th>cachnau</th>
+
+                    <th>soluong</th>
+                    <th>giamua</th>
+                    <th>giaban</th>
+
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:block th:each="haisan,interStart : ${haisans}">
+                    <td th:text="${interStart.count}"></td>
+                    <td th:text="${haisan.name}"></td>
+                    <td th:text="${haisan.date}"></td>
+                    <td th:text="${haisan.noiban}"></td>
+                    <td th:text="${haisan.cachnau}"></td>
+
+                    <td th:text="${haisan.soluong}"></td>
+                    <td th:text="${haisan.giamua}"></td>
+                    <td th:text="${haisan.giaban}"></td>
+
+                    <td><a th:href="@{/admin/haisan/{id}/edit(id=${haisan.id})}">
+                        <span>Edit</span></a></td>
+                    <td><a th:href="@{/admin/haisan/{id}/delete(id=${haisan.id})}"
+                           onclick="return confirm('Are You Sure?')">
+                        <button>Delete</button></a></td>
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </th:block>
+</div>
+<!-- /.container -->
+
+<footer th:replace="layoutP :: footer1"></footer>
+</body>
+</html>
