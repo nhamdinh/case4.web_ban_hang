@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d307d4ad-c5c2-4b9a-9360-94c0c548834d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/listC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/viewC.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutC.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/BillController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/GiohangController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/model/Bill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/model/Giohang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/BillRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/GiohangRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/BillService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/GiohangService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/impl/BillServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/impl/GiohangServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/bill/listBill.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/viewCG.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutBill.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,7 +25,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/codegym/ApplicationConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/codegym/ApplicationConfiguration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/ph_haisan-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/ph_haisan-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/codegym/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codegym/ApplicationConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/codegym/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/codegym/model/Haisan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codegym/model/Haisan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/listC.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/listC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/viewC.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client/viewC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/haisan/formH.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/haisan/formH.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutC.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutH.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutH.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutP.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/layoutP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/phanloai/formP.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/phanloai/formP.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +52,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -53,25 +78,27 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/bill" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\webapp\WEB-INF\templates\client" />
-      <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\webapp\WEB-INF\templates" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="codegym.controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\webapp\WEB-INF\templates\bill" />
       <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\webapp\WEB-INF\templates\client" />
       <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\webapp\WEB-INF\templates" />
       <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\java\codegym\controller" />
       <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\java\codegym" />
-      <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\java\codegym\repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="codegym.controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\webapp\WEB-INF\templates" />
+      <recent name="C:\Users\TOM\IdeaProjects\ph_haisan\src\main\webapp\WEB-INF\templates\client" />
     </key>
   </component>
   <component name="RunManager">
@@ -183,12 +210,26 @@
       <option name="presentableId" value="Default" />
       <updated>1587454428619</updated>
       <workItem from="1587454432628" duration="5232000" />
-      <workItem from="1587460162349" duration="4623000" />
+      <workItem from="1587460162349" duration="5430000" />
+      <workItem from="1587478609064" duration="7639000" />
+      <workItem from="1587509647984" duration="10531000" />
     </task>
+    <task id="LOCAL-00001" summary="đầu + khách">
+      <created>1587464958710</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587464958710</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="đầu + khách" />
+    <option name="LAST_COMMIT_MESSAGE" value="đầu + khách" />
   </component>
   <component name="WindowStateProjectService">
     <state x="444" y="138" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1587455851675">
@@ -199,69 +240,85 @@
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="168" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/62.0.1304.768@62.0.1304.768" timestamp="1587455737319" />
-    <state x="444" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587463639101">
+    <state x="519" y="67" key="#com.intellij.ide.util.MemberChooser" timestamp="1587515864467">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state x="444" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.0.1304.768@62.0.1304.768" timestamp="1587463639101" />
-    <state x="501" y="0" key="CommitChangelistDialog2" timestamp="1587464925104">
+    <state x="519" y="67" key="#com.intellij.ide.util.MemberChooser/62.0.1304.768@62.0.1304.768" timestamp="1587515864467" />
+    <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587514472418">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state x="501" y="0" key="CommitChangelistDialog2/62.0.1304.768@62.0.1304.768" timestamp="1587464925104" />
+    <state x="422" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/62.0.1304.768@62.0.1304.768" timestamp="1587514472418" />
+    <state x="444" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587515064493">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="444" y="130" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.0.1304.768@62.0.1304.768" timestamp="1587515064493" />
+    <state x="501" y="0" key="CommitChangelistDialog2" timestamp="1587464955162">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="501" y="0" key="CommitChangelistDialog2/62.0.1304.768@62.0.1304.768" timestamp="1587464955162" />
     <state x="494" y="138" key="FileChooserDialogImpl" timestamp="1587462017669">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="494" y="138" key="FileChooserDialogImpl/62.0.1304.768@62.0.1304.768" timestamp="1587462017669" />
-    <state width="1030" height="367" key="GridCell.Tab.0.bottom" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.0.bottom" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.0.center" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.0.bottom/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.0.center" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.0.left" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.0.center/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.0.left" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.0.right" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.0.left/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.0.right" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.1.bottom" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.0.right/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.1.bottom" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.1.bottom/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.1.center" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.1.bottom/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.1.center" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.1.center/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.1.left" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.1.center/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.1.left" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.1.left/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.1.right" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.1.left/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.1.right" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.1.right/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.2.bottom" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.1.right/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.2.bottom" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.2.bottom/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.2.center" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.2.bottom/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.2.center" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.2.center/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.2.left" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.2.center/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.2.left" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.2.left/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
-    <state width="1030" height="367" key="GridCell.Tab.2.right" timestamp="1587464840195">
+    <state width="1030" height="367" key="GridCell.Tab.2.left/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state width="1030" height="367" key="GridCell.Tab.2.right" timestamp="1587519702557">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
-    <state width="1030" height="367" key="GridCell.Tab.2.right/62.0.1304.768@62.0.1304.768" timestamp="1587464840195" />
+    <state width="1030" height="367" key="GridCell.Tab.2.right/62.0.1304.768@62.0.1304.768" timestamp="1587519702557" />
+    <state x="714" y="0" width="652" height="768" key="dock-window-1" timestamp="1587514826166">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="714" y="0" width="652" height="768" key="dock-window-1/62.0.1304.768@62.0.1304.768" timestamp="1587514826166" />
     <state x="456" y="12" key="refactoring.ChangeSignatureDialog" timestamp="1587462293892">
       <screen x="62" y="0" width="1304" height="768" />
     </state>
     <state x="456" y="12" key="refactoring.ChangeSignatureDialog/62.0.1304.768@62.0.1304.768" timestamp="1587462293892" />
+    <state x="370" y="167" key="run.anything.popup" timestamp="1587484744643">
+      <screen x="62" y="0" width="1304" height="768" />
+    </state>
+    <state x="370" y="167" key="run.anything.popup/62.0.1304.768@62.0.1304.768" timestamp="1587484744643" />
   </component>
 </project>

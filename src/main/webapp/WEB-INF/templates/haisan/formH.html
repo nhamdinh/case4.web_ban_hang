@@ -20,7 +20,7 @@
             <input type="hidden" th:field="*{id}"/>
             <div class="form-group">
                 <label>Name</label>
-                <input type="text" class="form-control"
+                <input maxlength="10" required type="text" class="form-control"
                        th:field="*{name}"/>
             </div>
 
@@ -36,32 +36,32 @@
 
 			<div class="form-group">
                 <label>date</label>
-                <input type="date" class="form-control"
+                <input required type="date" class="form-control"
                        th:field="*{date}"/>
             </div>
 			<div class="form-group">
 				<label>noiban</label>
-				<input type="text" class="form-control"
+				<input required type="text" class="form-control"
 					   th:field="*{noiban}" />
 			</div>
 			<div class="form-group">
 				<label>cachnau</label>
-				<input type="text" class="form-control"
+				<input required type="text" class="form-control"
 					   th:field="*{cachnau}" />
 			</div>
 			<div class="form-group">
 				<label>soluong</label>
-				<input type="number" class="form-control"
+				<input required min="0" type="number" class="form-control"
 					   th:field="*{soluong}" />
 			</div>
 			<div class="form-group">
 				<label>giamua</label>
-				<input type="number" class="form-control"
+				<input required min="0" step="10000"    type="number" class="form-control"
 					   th:field="*{giamua}" />
 			</div>
 			<div class="form-group">
 				<label>giaban</label>
-				<input type="number" class="form-control"
+				<input required step="10000" min="0" type="number" class="form-control"
 					   th:field="*{giaban}" />
 			</div>
 

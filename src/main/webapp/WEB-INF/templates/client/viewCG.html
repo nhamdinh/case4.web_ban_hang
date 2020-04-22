@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layoutC :: head">
+
+</head>
+<body>
+<nav th:replace="layoutC :: header"></nav>
+<div class="container main-content list">
+    <div th:if="${success}"
+         class="row alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert"
+                aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <span th:text="${success}"></span>
+    </div>
+
+    <div class="row">
+        <a th:href="@{/}" class="btn btn-success pull-left">
+            <span class="glyphicon glyphicon-plus"></span> Đăng ký
+        </a>
+        <form class="form-inline pull-right" action="#"
+              th:action="@{/haisan/search/1}" method="GET">
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="s"
+                       placeholder="Nhập hải sản cần tìm..." />
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+    <form th:action="@{/buy-cart}" th:object="${haisan}" method="post">
+        <input th:type="hidden" name="id" th:field="*{id}">
+        <table>
+            <tr>
+                <td>Tên hải sản:</td>
+                <td><input readonly type="text" th:field="*{name}"/></td>
+            </tr>
+            <tr>
+                <td>Nguồn gốc :</td>
+                <td><input readonly type="text" th:field="*{noiban}"/></td>
+            </tr>
+            <tr>
+                <td>Số lượng mua :</td>
+                <td><input min="0" type="number" th:field="*{soluong}"/></td>
+            </tr>
+            <tr>
+                <td>Giá bán :</td>
+                <td><input readonly type="text" th:field="*{giaban}"/></td>
+            </tr>
+            <tr>
+                <td>Cách chế biến :</td>
+                <td><input  type="text" th:field="*{cachnau}"/></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Mua món này" onclick="alert('Đã thêm vào giỏ hàng!')"></td>
+            </tr>
+        </table>
+    </form>
+
+
+
+</div>
+<!-- /.container -->
+
+<footer th:replace="layoutC :: footer1"></footer>
+</body>
+</html>

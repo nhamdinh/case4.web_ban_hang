@@ -20,7 +20,7 @@ public class Haisan {
     private int giaban;
 
     @ManyToOne
-    @JoinColumn(name="phanloai_id")
+    @JoinColumn(name = "phanloai_id")
     private Phanloai phanloai;
 
     public Haisan() {
@@ -97,4 +97,5 @@ public class Haisan {
     public void setCachnau(String cachnau) {
         this.cachnau = cachnau;
     }
+
 }

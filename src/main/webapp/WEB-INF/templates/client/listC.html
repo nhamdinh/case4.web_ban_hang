@@ -13,11 +13,14 @@
 			<span aria-hidden="true">&times;</span>
 		</button>
 		<span th:text="${success}"></span>
+
 	</div>
+
 	<div class="row">
-		<a th:href="@{/create-haisan}" class="btn btn-success pull-left">
-			<span class="glyphicon glyphicon-plus"></span> Add new hai san
+		<a th:href="@{/}" class="btn btn-success pull-left">
+			<span class="glyphicon glyphicon-plus"></span> Đăng ký
 		</a>
+
 		<form class="form-inline pull-right" action="#"
 			  th:action="@{/haisan/search/1}" method="GET">
 
@@ -28,6 +31,7 @@
 			<button type="submit" class="btn btn-primary">Search</button>
 		</form>
 	</div>
+
 	<th:block th:if="${#lists.isEmpty(haisans.pageList)}">
 		<h3>No hai san</h3>
 	</th:block>
@@ -50,19 +54,18 @@
 				</tr>
 				</thead>
 				<tbody>
-				<tr th:each="contact,iterStat : ${haisans.pageList}">
+				<tr th:each="haisan,iterStat : ${haisans.pageList}">
 					<td th:text="${iterStat.count}"></td>
-					<td th:text="${contact.getName()}"></td>
+					<td th:text="${haisan.getName()}"></td>
 
-					<td th:text="${contact.date}"></td>
-					<td th:text="${contact.noiban}"></td>
-					<td th:text="${contact.giaban}"></td>
+					<td th:text="${haisan.date}"></td>
+					<td th:text="${haisan.noiban}"></td>
+					<td th:text="${haisan.giaban}"></td>
 
-					<td><a th:href="@{/haisan/{id}/view(id=${contact.id})}">
+					<td><a th:href="@{/haisan/{id}/view(id=${haisan.id})}">
 						<span>Xem chi tiết</span></a></td>
 
-					<td><a th:href="@{/haisan/{id}/delete(id=${contact.id})}"
-						   onclick="return confirm('Are You Sure?')">
+					<td><a th:href="@{/haisan/{id}/buy(id=${haisan.id})}">
 						<button>Cho vào giỏ</button></a></td>
 				</tr>
 				</tbody>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layoutBill :: head"></head>
+<body>
+	<nav th:replace="layoutBill :: header"></nav>
+
+	<div class="container main-content list">
+		<div th:if="${success}"
+			class="row alert alert-success alert-dismissible">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<span th:text="${success}"></span>
+		</div>
+		<div class="row">
+<!--			<a th:href="@{/employee/create}" class="btn btn-success pull-left">-->
+<!--				<span class="glyphicon glyphicon-plus"></span> Add new employee-->
+<!--			</a>-->
+<!--			<form class="form-inline pull-right" action="#"-->
+<!--				th:action="@{/employee/search}" method="GET">-->
+<!--				<div class="form-group">-->
+<!--					<input type="text" class="form-control" name="s"-->
+<!--						placeholder="Type employee name..." />-->
+<!--				</div>-->
+<!--				<button type="submit" class="btn btn-primary">Search</button>-->
+<!--			</form>-->
+		</div>
+		<th:block th:if="${#lists.isEmpty(giohangs)}">
+			<h3>Không có hóa đơn nào </h3>
+		</th:block>
+
+		<th:block th:unless="${#lists.isEmpty(giohangs)}">
+			<div class="row">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Name</th>
+							<th>Số lượng</th>
+							<th>Giá bán </th>
+							<th>Edit</th>
+							<th>Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="contact,iterStat : ${giohangs}">
+							<td th:text="${iterStat.count}"></td>
+							<td th:text="${contact.name}"></td>
+							<td><input min="0" type="number" value="1"></td>
+
+							<td th:text="${contact.giaban}"></td>
+							<td><a th:href="@{/employee/{id}/edit(id=${contact.id})}"><span
+									class="glyphicon glyphicon-pencil">aa</span></a></td>
+							<td><a th:href="@{/employee/{id}/delete(id=${contact.id})}"><span
+									class="glyphicon glyphicon-trash">bbb</span></a></td>
+						</tr>
+					</tbody>
+				</table>
+				<tr><td><input type="submit" value="TRẢ TIỀN"></td></tr>
+
+			</div>
+		</th:block>
+	</div>
+	<!-- /.container -->
+
+	<footer th:replace="layoutBill :: footer"></footer>
+</body>
+</html>

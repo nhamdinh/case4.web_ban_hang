@@ -1,7 +1,11 @@
 package codegym;
 
+import codegym.service.BillService;
+import codegym.service.GiohangService;
 import codegym.service.HaisanService;
 import codegym.service.PhanloaiService;
+import codegym.service.impl.BillServiceImpl;
+import codegym.service.impl.GiohangServiceImpl;
 import codegym.service.impl.HaisanServiceImpl;
 import codegym.service.impl.PhanloaiServiceImpl;
 import org.springframework.beans.BeansException;
@@ -148,6 +152,16 @@ public class ApplicationConfiguration extends WebMvcConfigurerAdapter implements
     @Bean
     public HaisanService haisanService() {
         return new HaisanServiceImpl();
+    }
+
+    @Bean
+    public GiohangService giohangService(){
+        return new GiohangServiceImpl();
+    }
+
+    @Bean
+    public BillService billService(){
+        return  new BillServiceImpl();
     }
 
 
